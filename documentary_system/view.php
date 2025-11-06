@@ -44,6 +44,5 @@ $list = $requirements[$transaction] ?? ["No data available"];
         <button type="button" class="btn" onclick="window.location.href='requirements.php'">Back</button>
     </form>
 </div>
-HI!
 </body>
 </html>
