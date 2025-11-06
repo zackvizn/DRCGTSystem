@@ -13,6 +13,8 @@
       padding: 40px;
       max-width: 900px;
       line-height: 1.6;
+      position: relative;
+      min-height: 100vh;
     }
 
     h2 {
@@ -35,33 +37,40 @@
       margin-top: 25px;
     }
 
-    ol {
+    ol, ul {
       margin-left: 25px;
     }
 
-    .btn-container {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 50px;
-    }
-
-    button {
-      background-color: #004aad;
-      color: white;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 8px;
-      font-size: 16px;
+    /* Simple arrows centered vertically */
+    .arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: #004aad;
+      text-decoration: none;
+      font-weight: bold;
       cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+      user-select: none;
     }
 
-    button:hover {
-      background-color: #00357d;
+    .arrow:hover {
+      color: #00357d;
+      transform: translateY(-50%) scale(1.2);
+    }
+
+    .arrow.left {
+      left: 40px;
+    }
+
+    .arrow.right {
+      right: 40px;
     }
 
     .page-number {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 80px;
       font-style: italic;
     }
   </style>
@@ -110,11 +119,9 @@
     <li>A cash advance shall be reported as soon as the purpose for which it was given has been served.</li>
   </ul>
 
-  <div class="btn-container">
-    <button onclick="window.location.href='toc_page3.php'">⬅ Back</button>
-    <button onclick="window.location.href='page2.php'">Next ➡</button>
-
-  </div>
+  <!-- Simple arrows -->
+  <a href="toc_page3.php" class="arrow left">❮</a>
+  <a href="page2.php" class="arrow right">❯</a>
 
   <div class="page-number">Page 1 of 52</div>
 
